@@ -1,0 +1,16 @@
+---
+name: "Get latest release tag using a regex to filter"
+description: "Update kubernetes deployment image"
+inputs:
+  github_token:
+    description: "GitHub token to fetch release data"
+    required: true
+  regex:
+    description: "regex pattern to match only certain tags"
+    required: true
+outputs:
+  tag:
+    description: "Tag value"
+runs:
+  using: "docker"
+  image: "Dockerfile"
