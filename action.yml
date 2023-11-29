@@ -5,6 +5,7 @@ inputs:
   github_token:
     description: "GitHub token to fetch release data"
     required: true
+    default: ${{ github.token }}
   regex:
     description: "regex pattern to match only certain tags"
     required: true
